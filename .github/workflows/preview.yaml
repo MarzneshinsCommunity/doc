@@ -41,15 +41,19 @@ jobs:
         if: always()
         with:
           script: |
-            const message = `Hugo build status: ${process.env.STATUS}
-            
-            Build completed with ${process.env.STATUS === 'success' ? '✅' : '❌'}`;
-            
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.name,
-              body: message
-            })
+            try {
+              const message = `Hugo build status: ${process.env.STATUS}
+              
+              Build completed with ${process.env.STATUS === 'success' ? '✅' : '❌'}`;
+              
+              await github.rest.issues.createComment({
+                ...context.repo,
+                issue_number: context.issue.number,
+                body: message
+              });
+            } catch (error) {
+              console.error('Failed to create comment:', error);
+              core.setFailed(error.message);
+            }
         env:
           STATUS: ${{ job.status }}
