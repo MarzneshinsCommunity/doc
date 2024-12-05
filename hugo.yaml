@@ -1,5 +1,5 @@
 # Hugo configuration file
-title: My Site
+title: Marzneshin Community
 
 # import hextra as module
 module:
@@ -19,13 +19,10 @@ markup:
 menu:
   main:
     - name: Docs
-      pageRef: /docs
+      pageRef: /
       weight: 1
-    - name: About
-      pageRef: /about
-      weight: 2
-    - name: Contact ↗
-      url: "https://github.com/imfing"
+    - name: Contact
+      url: "https://t.me/Marzneshins"
       weight: 3
     - name: Search
       weight: 4
@@ -33,24 +30,43 @@ menu:
         type: search
     - name: GitHub
       weight: 5
-      url: "https://github.com/imfing/hextra-starter-template"
+      url: "https://github.com/marzneshin/marzneshin"
       params:
         icon: github
-    - name: Twitter
-      weight: 6
-      url: "https://twitter.com/"
-      params:
-        icon: x-twitter
+
 
 params:
   navbar:
     displayTitle: true
     displayLogo: false
+    width: normal
 
   footer:
     displayCopyright: false
-    displayPoweredBy: true
+    displayPoweredBy: false
+    width: normal
 
   editURL:
     enable: true
-    base: "https://github.com/imfing/hextra-starter-template/edit/main/content"
+    base: "https://github.com/marzneshincommunity/doc/edit/main/content"
+
+  page:
+    width: normal
+
+  search:
+    enable: true
+    type: flexsearch
+
+    flexsearch:
+      index: content
+  
+defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+  fa:
+    languageName: فارسی
+    languageDirection: rtl
+    title: مرزنشین کامیونیتی
+    weight: 2
