@@ -18,15 +18,15 @@ markup:
 
 menu:
   main:
-    - identifier: About
+    - identifier: about
     - name: About
       pageRef: /
       weight: 2
-    - identifier: Docs
+    - identifier: docs
     - name: Docs
       pageRef: /docs
       weight: 2
-    - identifier: Contact
+    - identifier: contact
     - name: Contact
       url: "https://t.me/Marzneshins"
       weight: 3
