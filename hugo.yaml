@@ -18,9 +18,12 @@ markup:
 
 menu:
   main:
-    - name: Docs
+    - name: About
       pageRef: /
-      weight: 1
+      weight: 2
+    - name: Docs
+      pageRef: /docs
+      weight: 2
     - name: Contact
       url: "https://t.me/Marzneshins"
       weight: 3
