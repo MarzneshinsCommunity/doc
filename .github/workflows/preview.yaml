@@ -6,6 +6,9 @@ on:
 permissions:
   contents: read
   pull-requests: write
+  issues: write # Add this permission
+  actions: read
+  statuses: write
 
 defaults:
   run:
