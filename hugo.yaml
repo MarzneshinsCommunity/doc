@@ -1,5 +1,5 @@
 # Hugo configuration file
-title: Marzneshin Community
+
 
 # import hextra as module
 module:
@@ -18,22 +18,26 @@ markup:
 
 menu:
   main:
-    - identifier: about
-    - name: About
+    - identifier: About
+      name: About
       pageRef: /
       weight: 2
-    - identifier: docs
-    - name: Docs
+
+    - identifier: Docs
+      name: Docs
       pageRef: /docs
       weight: 2
-    - identifier: contact
-    - name: Contact
+
+    - identifier: Contact
+      name: Contact
       url: "https://t.me/Marzneshins"
       weight: 3
+    
     - name: Search
       weight: 4
       params:
         type: search
+      
     - name: GitHub
       weight: 5
       url: "https://github.com/marzneshin/marzneshin"
@@ -70,6 +74,7 @@ defaultContentLanguage: en
 languages:
   en:
     languageName: English
+    title: Marzneshin Community
     weight: 1
   fa:
     languageName: فارسی
