@@ -43,6 +43,12 @@ menu:
       url: "https://github.com/marzneshin/marzneshin"
       params:
         icon: github
+    
+    - name: Telegram
+      weight: 6
+      url: "https://t.me/MarzneshinCommunity"
+      params:
+        icon: telegram
 
 
 params:
