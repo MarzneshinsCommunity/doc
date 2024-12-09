@@ -25,6 +25,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
+            const { github, context } = require('@actions/github');
             const issue_number = context.issue.number;
             const comment = "Hugo build status: failure\n\nBuild completed with ❌";
             await github.issues.createComment({
