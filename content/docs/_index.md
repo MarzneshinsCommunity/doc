@@ -14,7 +14,7 @@ marznode manages and interacts with vpn backends (such as xray).
    Please note that this is not an official document, and any issues encountered are your responsibility.
 {{< /callout >}}
 
-{{< cards >}}
+{{< cards  cols="1">}}
   {{< card link="getting-started" title="Getting Started" icon="document-text">}}
 {{< /cards >}}
 
