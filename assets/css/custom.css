@@ -5,8 +5,19 @@
     font-family: 'Hack';
     direction: ltr;
   }
+
 .cl {
     font-family: 'Hack';
+}
+
+html[lang="fa"] pre {
+    direction: ltr;
+    overflow-x: auto; /* or overflow: auto; if you need vertical scroll too */
+  }
+
+html[lang="fa"] .hextra-card-tag{
+    right: initial !important;
+    left: 5px;
 }
 
 html[lang="fa"] {
