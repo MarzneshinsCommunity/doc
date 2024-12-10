@@ -10,7 +10,9 @@ Welcome! Here, you'll find quick access to various guides and resources to help 
   {{< card link="overview" title="Overview" icon="document-text">}}
 {{< /cards >}}
 
+
 {{< cards cols="1">}}
+
   {{< card link="getting-started" title="Getting Started" icon="document-text">}}
 {{< /cards >}}
 
@@ -24,4 +26,8 @@ Welcome! Here, you'll find quick access to various guides and resources to help 
 
 For more detailed information, please refer to the individual sections listed in the sidebar.
 
+
+
+
+[marznode](https://github.com/marzneshin/marznode) is the backend needed to run proxy servers.
 
