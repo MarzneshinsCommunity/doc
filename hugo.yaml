@@ -64,7 +64,7 @@ params:
 
   editURL:
     enable: true
-    base: "https://github.com/marzneshincommunity/doc/edit/main/content"
+    base: "https://github.com/marzneshinscommunity/doc/edit/main/content"
 
   page:
     width: normal
