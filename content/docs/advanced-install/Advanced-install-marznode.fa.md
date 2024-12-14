@@ -1,11 +1,8 @@
 ---
-title: نصب پیشرفته مرزنشین
-linkTitle: "Marzneshin"
+title: نصب پیشرفته مرزنود
+linkTitle: "مرزنود"
 prev: Advanced-install-Marzneshin
 ---
-
-# **مرزنود**
-
 
 ### پیش‌نیازها
   * *docker*

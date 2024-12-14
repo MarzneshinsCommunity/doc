@@ -1,25 +1,27 @@
 ---
 title: Overview
 linkTitle: "Overview"
-next: docs/Getting-started
+next: docs/basic-install
 weight: 1
 ---
 
-Marzneshin is a censorship circumvention tool utilizing other censorship circumvention tools.
-
-Marzneshin controls the [Marznodes](https://github.com/marzneshin/marznode)
-connected to it; monitoring/disabling/enabling users on marznode instances while
-marznode manages and interacts with vpn backends (such as xray).
+Marzneshin is a tool that manages [Marznodes](https://github.com/marzneshin/marznode) for censorship circumvention. It controls user access and interacts with VPN backends like xray.
 
 {{< callout type="warning" >}}
    Please note that this is not an official document, and any issues encountered are your responsibility.
 {{< /callout >}}
 
-{{< cards >}}
-  {{< card link="getting-started" title="Getting Started" icon="document-text">}}
+there is two main ways to install Marzneshin Core and Marznode.
+
+{{< cards cols="1">}}
+    {{< card link="basic-install" title="Basic Install" icon="puzzle" tag= "Recommended" tagType="error">}}
 {{< /cards >}}
 
-### Features
+{{< cards cols="1">}}
+    {{< card link="advanced-install" title="Advanced Install" icon="cog" tag="For Contributors and Professionals" tagType="info">}}
+{{< /cards >}}
+
+{{% details title="Features" closed="true" %}}
 
 - **Web UI** Dashboard
 - **Multi Nodes** support for traffic distribution, scalability, and fault tolerance
@@ -45,3 +47,7 @@ marznode manages and interacts with vpn backends (such as xray).
 ### marznode
 
 [marznode](https://github.com/marzneshin/marznode) is the backend needed to run proxy servers.
+
+{{% /details %}}
+
+

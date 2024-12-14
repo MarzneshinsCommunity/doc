@@ -1,7 +1,7 @@
 ---
 title: نصب پیشرفته
 previous: /docs/getting-started
-weight: 2
+weight: 3
 ---
 نصب پیشرفته:
 {{< cards >}}

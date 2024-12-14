@@ -2,7 +2,7 @@
 title: نصب ساده
 prev: /docs/getting-started/
 next : basic-install-marzneshin
-weight: 1
+weight: 2
 ---
 نصب ساده :
 {{< cards >}}
