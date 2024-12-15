@@ -2,7 +2,7 @@
 title: Basic installation
 prev: /docs/getting-started/
 next : basic-install-marzneshin
-weight: 1
+weight: 2
 ---
 Basic installation :
 {{< cards >}}

@@ -1,10 +1,8 @@
 ---
-title: Advanced install marznode 
-linkTitle: "Marzneshin"
+title: Advanced install Marznode 
+linkTitle: "Marznode"
 prev: Advanced-install-Marzneshin
 ---
-
-# **Marznode**
 
 
 ### Prerequisites
