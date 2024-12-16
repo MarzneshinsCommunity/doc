@@ -1,0 +1,32 @@
+{
+    "inbounds": [
+        {
+            "tag": "Sing-Box-Reality",
+            "type": "vless",
+            "listen": "0.0.0.0",
+            "listen_port": 443,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "ipv4_only",
+            "users": [],
+            "tls": {
+                "enabled": true,
+                "server_name": "www.apple.com",
+                "reality": {
+                    "enabled": true,
+                    "handshake": {
+                        "server": "www.apple.com",
+                        "server_port": 443
+                    },
+                    "private_key": "kH-cXVs8tftom8tNdmBoe-Fe80JtvLWTkZK3LQSTD0Q",
+                    "short_id": [
+                        "a56f71"
+                    ]
+                }
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "direct"
+        },
