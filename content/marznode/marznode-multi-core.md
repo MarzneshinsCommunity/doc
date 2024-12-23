@@ -12,6 +12,7 @@ title: "Activating MarzNode Cores"
 ### **Xray**  
 ### **hysteria2**
 ### **SingBox**  
+### **Additional Details**
 
 {{% /steps %}}
  ___
@@ -140,5 +141,114 @@ ___The End ___
 
   ___ The End ___
 
-  
+  ### Additional Details:
 {{% /steps %}}
+
+{{% details title="Additional Details" %}}
+
+## General Variables and Their Usage
+
+{{% steps %}}
+
+### True and False  
+In configuration variables, the values `True` and `False` are used to control the status of features and services:  
+* **True**: Used to enable a feature or service.  
+* **False**: Used to disable a feature or service.  
+- To enable a feature, set the variable to `True`.  
+- To disable a feature, set the variable to `False`.  
+
+___  
+
+### DEBUG  
+* This variable is used to toggle the debug mode.  
+  - ```bash
+      DEBUG: "True"
+      ```  
+* **True**: Enables debug mode, providing more detailed logs to troubleshoot issues.  
+* **False**: Disables debug mode, showing only essential information.  
+
+___  
+
+### AUTH_GENERATION_ALGORITHM  
+
+* This variable specifies the algorithm used for generating hashes or authentication keys.  
+
+    - ```bash
+      AUTH_GENERATION_ALGORITHM: "xxh128"
+       ```  
+* **xxh128**: A 128-bit version of the xxHash algorithm, known for its high speed and suitability for scenarios requiring fast hash generation with low collision probability.  
+* **sha256**: A secure and standard algorithm, ideal for sensitive security applications.  
+* **md5**: An older algorithm with high speed but low security, recommended only for non-critical use cases.  
+
+> **xxh128**: Ideal for environments where speed and performance are critical.  
+> **sha256**: Recommended for applications prioritizing security over speed.  
+> **md5**: Only use for non-sensitive applications.  
+
+___  
+
+### Managing the `XRAY` Service in Marzneshin  
+
+#### Variables and Descriptions:  
+
+> A variable to enable or disable the XRAY service.  
+> * `XRAY_ENABLED:` `"True" / "False"`  
+
+> Path to the XRAY executable used to launch the service.  
+> * `XRAY_EXECUTABLE_PATH:` `"/usr/local/bin/xray"`  
+
+> Path to XRAY’s asset files and libraries.  
+> * `XRAY_ASSETS_PATH:` `"/usr/local/lib/xray"`  
+
+> A variable for enabling or modifying the Flow in VLESS configuration with Reality support.  
+> * `XRAY_VLESS_REALITY_FLOW:` `"xtls-rprx-vision"`  
+
+> Specifies whether XRAY should automatically restart in case of failure.  
+> * `XRAY_RESTART_ON_FAILURE:` `"True" / "False"`  
+
+> The interval (in seconds) between automatic restart attempts after XRAY encounters an error.  
+> * `XRAY_RESTART_ON_FAILURE_INTERVAL: "0"`  
+>
+> **Usage**: If restart attempts are needed, set a specific interval in seconds.  
+
+___  
+
+### Managing the Hysteria Service in Marzneshin  
+
+#### Variables and Descriptions:  
+
+> A variable to enable or disable the Hysteria service.  
+> * `HYSTERIA_ENABLED:` `"True" / "False"`  
+
+> Path to the Hysteria executable used to launch the service.  
+> * `HYSTERIA_EXECUTABLE_PATH:` `"/usr/bin/hysteria"`  
+
+> Path to Hysteria’s configuration file containing the key service settings.  
+> * `HYSTERIA_CONFIG_PATH:` `"/var/lib/marznode/hysteria.yaml"`  
+
+___  
+
+### Managing the Sing-Box Service in Marzneshin  
+
+#### Variables and Descriptions:  
+
+> A variable to enable or disable the Sing-Box service.  
+> * `SING_BOX_ENABLED:` `"True" / "False"`  
+
+> Path to the Sing-Box executable used to run the service.  
+> * `SING_BOX_EXECUTABLE_PATH:` `"/usr/bin/sing-box"`  
+
+> Path to Sing-Box’s configuration file containing key service settings.  
+> * `SING_BOX_CONFIG_PATH:` `"/var/lib/marznode/sing-box.json"`  
+
+> Specifies whether Sing-Box should automatically restart in case of failure.  
+> * `SING_BOX_RESTART_ON_FAILURE:` `"True" / "False"`  
+
+> The interval (in seconds) between automatic restart attempts after Sing-Box encounters an error.  
+> * `SING_BOX_RESTART_ON_FAILURE_INTERVAL: "0"`  
+>
+> **Usage**: If restart attempts are needed, set a specific interval in seconds.  
+
+{{% /steps %}}  
+{{% /details %}}
+
+
