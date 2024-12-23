@@ -19,7 +19,7 @@ title: "Activating MarzNode Cores"
 
 {{% steps %}}
 
-### Xray Core  
+### Xray Core :
 * When MarzNode is installed, the Xray core is activated by default. No additional configuration is required for this core.
 
 >#### To disable the Xray core, set the following variable:
@@ -30,9 +30,9 @@ title: "Activating MarzNode Cores"
 >
 >
   
-__
+__The End ___
 
-### Hysteria2 Core
+### Hysteria2 Core :
 
 {{< callout type="info" >}}
 
@@ -88,10 +88,10 @@ HYSTERIA_ENABLED: "True"
 >
    {{% /steps %}}
 
-__
+___The End ___
 
 
-### Sing-Box
+### Sing-Box core :
  {{% steps %}}
 
  ### Download the Sing-Box Config File:
@@ -114,8 +114,8 @@ __
 
 ### Add the Following Variables to the Docker Configuration File:
 * ```bash
-   SING_BOX_ENABLED: "True"
-   SING_BOX_CONFIG_PATH: "/var/lib/marznode/sing-box.json"
+  SING_BOX_ENABLED: "True"
+  SING_BOX_CONFIG_PATH: "/var/lib/marznode/sing-box.json"
 
    ```
 ### Restart MarzNode:
@@ -137,4 +137,8 @@ __
 
 
   {{% /steps %}}
+
+  ___ The End ___
+
+  
 {{% /steps %}}

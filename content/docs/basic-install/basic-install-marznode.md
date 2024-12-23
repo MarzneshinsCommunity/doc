@@ -119,10 +119,10 @@ linkTitle: "Marznode"
 {{% /steps %}}
 
 
-{{< /callout >}}
+
 
 {{< callout emoji="💠" >}}
 
-[Get Started with MarzNode Cores – Begin Now!](/marznode/marznode-multi-core/)
+ [Get Started with MarzNode Cores – Begin Now!](/marznode/marznode-multi-core/)
 
 {{< /callout >}}
