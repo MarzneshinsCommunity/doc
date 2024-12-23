@@ -144,7 +144,7 @@ ___The End ___
   ### Additional Details:
 {{% /steps %}}
 
-{{% details title="Additional Details""closed="true" %}}
+{{% details title="Additional Details"closed="true" %}}
 
 ## General Variables and Their Usage
 
