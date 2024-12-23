@@ -117,3 +117,12 @@ linkTitle: "Marznode"
      docker compose down && docker compose up -d
        ```
 {{% /steps %}}
+
+
+
+
+{{< callout emoji="💠" >}}
+
+ [Get Started with MarzNode Cores – Begin Now!](/marznode/marznode-multi-core/)
+
+{{< /callout >}}

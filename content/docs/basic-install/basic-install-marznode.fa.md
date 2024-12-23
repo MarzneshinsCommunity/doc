@@ -120,3 +120,12 @@ title: مرزنود
      docker compose down && docker compose up -d
        ```
 {{% /steps %}}
+
+
+{{< callout emoji="💠" >}}
+
+
+  [راه‌اندازی هسته‌های مرزنود - همین حالا شروع کنید](/marznode/marznode-multi-core-fa/)
+
+
+  {{< /callout >}}
