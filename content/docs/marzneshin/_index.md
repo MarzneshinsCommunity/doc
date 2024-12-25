@@ -2,6 +2,7 @@
 title: Basic install Marzneshin 
 linkTitle : Marzneshin
 toc: False
+weight: 1
 ---
 
 To get started, you need a Linux machine.
