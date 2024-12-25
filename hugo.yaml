@@ -23,10 +23,10 @@ menu:
       pageRef: /
       weight: 2
 
-    - identifier: Docs
-      name: Docs
-      pageRef: /docs
-      weight: 2
+    - identifier: Home
+      name: Home
+      pageRef: /
+      weight: 1
 
     - identifier: Contact
       name: Contact
