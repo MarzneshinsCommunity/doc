@@ -1,7 +1,7 @@
 ---
 title: مرزنود
 toc: false
-weight: 1
+weight: 2
 ---
 
 فقط یک فورک از مرزبان نود

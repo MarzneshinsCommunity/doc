@@ -1,7 +1,7 @@
 ---
 title: MarzNode
 toc: false
-weight: 1
+weight: 2
 ---
 
 Just a fork of Marzban-Node
