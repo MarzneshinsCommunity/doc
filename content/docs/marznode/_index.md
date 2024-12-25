@@ -1,8 +1,10 @@
 ---
-title: Advanced install Marznode 
+title: Basic install Marznode
 linkTitle: "Marznode"
-prev: Advanced-install-Marzneshin
+toc: False
 ---
+
+# **Marznode**
 
 
 ### Prerequisites
@@ -116,3 +118,12 @@ prev: Advanced-install-Marzneshin
      docker compose down && docker compose up -d
        ```
 {{% /steps %}}
+
+
+
+
+{{< callout emoji="💠" >}}
+
+ [Get Started with MarzNode Cores – Begin Now!](extra/marznode-multi-core)
+
+{{< /callout >}}

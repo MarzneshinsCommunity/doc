@@ -10,5 +10,5 @@ toc: false
 
 {{< cards >}}
   {{< card link="docs/marzneshin" title="نصب مرزنشین">}}
-  {{< card link="about" title="نصب مرزنود">}}
+  {{< card link="docs/marznode" title="نصب مرزنود">}}
 {{< /cards >}}

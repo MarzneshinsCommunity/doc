@@ -1,7 +1,7 @@
 ---
 title: Basic install Marzneshin 
 linkTitle : Marzneshin
-previous: Basic-install-marznode
+toc: False
 ---
 
 To get started, you need a Linux machine.
