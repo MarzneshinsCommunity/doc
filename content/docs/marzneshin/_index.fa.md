@@ -1,6 +1,6 @@
 ---
 title: مرزنشین
-previous: Basic-install-marznode
+toc: False
 ---
 
 برای شروع، به یک سرور لینوکس (هردستگاهی که توانایی اجرای داکر دارد) نیاز دارید.
@@ -65,7 +65,3 @@ marzneshin cli admin create --sudo
 ```bash
 marzneshin --help
 ```
-
-### پیکربندی TLS
-
-به [اجرای پشت nginx](/docs/how-to-guides/behind-nginx) مراجعه کنید.

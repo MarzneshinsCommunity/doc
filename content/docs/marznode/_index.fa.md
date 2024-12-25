@@ -1,8 +1,8 @@
 ---
-title: نصب پیشرفته مرزنود
-linkTitle: "مرزنود"
-prev: Advanced-install-Marzneshin
+title: مرزنود
+toc: False
 ---
+
 
 ### پیش‌نیازها
   * *docker*
@@ -118,3 +118,12 @@ prev: Advanced-install-Marzneshin
      docker compose down && docker compose up -d
        ```
 {{% /steps %}}
+
+
+{{< callout emoji="💠" >}}
+
+
+  [راه‌اندازی هسته‌های مرزنود - همین حالا شروع کنید](extra/marznode-multi-core-fa)
+
+
+  {{< /callout >}}
