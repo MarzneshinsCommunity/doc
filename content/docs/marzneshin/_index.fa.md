@@ -1,68 +1,52 @@
----
-title: مرزنشین
-toc: False
-weight: 1
----
+---  
+title: نصب  
+toc: False  
+weight: 1  
+---  
 
-برای شروع، به یک سرور لینوکس (هردستگاهی که توانایی اجرای داکر دارد) نیاز دارید.
+برای شروع، به یک دستگاه لینوکسی نیاز دارید. مرزنشین از هر دو معماری ARM و x86 پشتیبانی می‌کند. Docker نیز پشتیبانی می‌شود. مرزنشین از پایگاه‌های داده زیر پشتیبانی می‌کند. برای تنظیمات کوچک، **SQLite** مناسب است و برای کانفیگ‌های بزرگ‌تر، **MariaDB** توصیه می‌شود. 
 
-{{< callout type="info" >}}
-ما اوبونتو را به دلیل سهولت استفاده توصیه می‌کنیم، اگرچه مرزنشین می‌تواند بر روی هر توزیع لینوکس اجرا شود.
-{{< /callout >}}
+{{< tabs items="mariadb,mysql,sqlite" >}}  
 
-مرزنشین از هر دو معماری ARM و x86 پشتیبانی می‌کند. Docker نیز پشتیبانی می‌شود.
+{{< tab >}}  
+```bash  
+sudo bash -c "$(curl -sL https://github.com/marzneshin/Marzneshin/raw/master/script.sh)" @ install --database mariadb  
+```  
+{{< /tab >}}  
+{{< tab >}}  
+```bash  
+sudo bash -c "$(curl -sL https://github.com/marzneshin/Marzneshin/raw/master/script.sh)" @ install --database mysql  
+```  
+{{< /tab >}}  
+{{< tab >}}  
+```bash  
+sudo bash -c "$(curl -sL https://github.com/marzneshin/Marzneshin/raw/master/script.sh)" @ install  
+```  
+{{< /tab >}}  
 
-{{< callout type="info" >}}
-نصب سریع:
+{{< /tabs >}}  
 
-```bash
-sudo bash -c "$(curl -sL https://github.com/marzneshin/Marzneshin/raw/master/script.sh)" @ install
-```
+{{< callout type="warning" >}}  
+برای نصب آخرین نسخه **nightly** (حالت توسعه)، از فلگ `--nightly` استفاده کنید.  
+{{< /callout >}}  
 
-پس از آن، یک ادمین ایجاد کنید:
+پس از اتمام نصب:  
 
-```bash
-marzneshin cli admin create --sudo
-```
+- لاگ‌ها نمایش داده خواهند شد که با فشار دادن `Ctrl+C` می‌توانید مشاهده آن‌ها را متوقف کنید.  
+- فایل تنظیمات در مسیر `/etc/opt/marzneshin/.env` قرار می‌گیرد.  
+- فایل‌های داده در مسیر `/var/lib/marzneshin` ذخیره می‌شوند.  
+- برای دسترسی به داشبورد مرزنشین، مرورگر وب خود را باز کرده و به آدرس `http://<SERVER_IP>:8000/dashboard/` بروید.  
 
-{{< /callout >}}
+در مرحله بعد، یک کاربر ادمین با دسترسی سودو برای ورود به داشبورد مرزنشین ایجاد کنید:  
 
-مرزنشین از پایگاه‌های داده زیر پشتیبانی می‌کند. SQLite برای تنظیمات کوچک ترجیح داده می‌شود، در حالی که MariaDB برای پردازش های بیشتر توصیه می شود.
-{{< tabs items="mariadb,mysql,sqlite" >}}
+```bash  
+marzneshin cli admin create --sudo  
+```  
 
-{{< tab >}}```bash
-sudo bash -c "$(curl -sL https://github.com/marzneshin/Marzneshin/raw/master/script.sh)" @ install --database mariadb
-```{{< /tab >}}
-{{< tab >}}```bash
-sudo bash -c "$(curl -sL https://github.com/marzneshin/Marzneshin/raw/master/script.sh)" @ install --database mysql
-```{{< /tab >}}
-{{< tab >}}```bash
-sudo bash -c "$(curl -sL https://github.com/marzneshin/Marzneshin/raw/master/script.sh)" @ install
-```{{< /tab >}}
+همین! اکنون می‌توانید با استفاده از اطلاعات لاگین خود وارد داشبورد شوید.  
 
-{{< /tabs >}}
+برای مشاهده پیام راهنما، دستور زیر را اجرا کنید:  
 
-{{< callout type="warning" >}}
-برای نصب آخرین نسخه **nightly**، از فلگ `--nightly` استفاده کنید.
-{{< /callout >}}
-
-پس از اتمام نصب:
-
-- شما لاگ‌ها را مشاهده خواهید کرد که می‌توانید با فشار دادن `Ctrl+C` مشاهده آن‌ها را متوقف کنید. فرآیند به طور عادی ادامه خواهد یافت.
-- فایل پیکربندی در مسیر `/etc/opt/marzneshin/.env` قرار دارد (به صفحه [پیکربندی](/docs/configuration/marzneshin) مراجعه کنید).
-- فایل‌های داده در مسیر `/var/lib/marzneshin` قرار خواهند گرفت، به عنوان مثال، پایگاه داده SQLite.
-- شما می‌توانید به داشبورد مرزنشین با باز کردن یک مرورگر وب و رفتن به `http://<SERVER_IP>:8000/dashboard/` دسترسی پیدا کنید.
-
-سپس، یک ادمین سودو برای ورود به داشبورد مرزنشین با استفاده از فرمان زیر ایجاد کنید:
-
-```bash
-marzneshin cli admin create --sudo
-```
-
-همین! شما می‌توانید با استفاده از این credentials به داشبورد خود وارد شوید.
-
-برای مشاهده پیام راهنمای اسکریپت مرزنشین، فرمان زیر را اجرا کنید:
-
-```bash
-marzneshin --help
+```bash  
+marzneshin --help  
 ```
