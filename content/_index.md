@@ -10,6 +10,6 @@ This document serves as the community version of the main Marzneshin documentati
 
 
 {{< cards >}}
-  {{< card link="docs" title="Install Marzneshin">}}
+  {{< card link="docs/marzneshin" title="Install Marzneshin">}}
   {{< card link="about" title="Install Marznode">}}
 {{< /cards >}}

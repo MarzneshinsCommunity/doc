@@ -66,7 +66,3 @@ To see the help message of the Marzneshin script, run the following command:
 ```bash
 marzneshin --help
 ```
-
-### Configuring TLS
-
-Refer to [running behind nginx](/docs/how-to-guides/behind-nginx)
