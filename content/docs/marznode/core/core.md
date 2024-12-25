@@ -1,21 +1,7 @@
 ---
-title: "Activating MarzNode Cores"
+title: Cores
+weight: 4
 ---
-
-   
- ___
-  
-### This guide explains the configuration and setup process for the following cores:
-
-{{% steps %}}
-
-### **Xray**  
-### **hysteria2**
-### **SingBox**  
-### **Additional Details**
-
-{{% /steps %}}
- ___
 
 
 {{% steps %}}
@@ -139,9 +125,6 @@ ___The End ___
 
   {{% /steps %}}
 
-  ___ The End ___
-
-  ### Additional Details:
 {{% /steps %}}
 
 {{% details title="Additional Details"closed="true" %}}
