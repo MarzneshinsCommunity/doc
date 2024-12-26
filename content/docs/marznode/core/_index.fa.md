@@ -47,7 +47,7 @@ weight: 4
     - ```bash
        cd marznode && nano compose.yml
       ```
-### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
+##### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
 * برای نود `لوکال`، فایل زیر را ویرایش کنید
     - ```bash
       nano /etc/opt/marzneshin/docker-compose.yml
@@ -66,7 +66,7 @@ HYSTERIA_ENABLED: "True"
     - ```bash
       docker compose down && docker compose up -d
       ```
-### ریستارت نود لوکال پنل Marzneshin:
+##### ریستارت نود لوکال پنل Marzneshin:
 * برای نود لوکال از دستور زیر استفاده کنید
     
      - ```bash
@@ -91,19 +91,14 @@ HYSTERIA_ENABLED: "True"
     - ```bash
         curl -L https://raw.githubusercontent.com/MarzneshinsCommunity/files/refs/heads/main/sing-box.json > /var/lib/marznode/sing-box.json
         ```
-برای غیرفعال کردن هسته سینگ‌باکس متغییر زیرو مقدار دهی کنید 
-```bash
-    SING_BOX_ENABLED: "False" / "True"
-  ```
-```bash
-    SING_BOX_ENABLED: "False"
-  ```
+
+
   ### ویرایش فایل تنظیمات Marznode:
   * ابتدا به دایرکتوری Marznode بروید و فایل تنظیمات Docker Compose را باز کنید
       - ```bash
         cd marznode && nano compose.yml
           ```
-### ویرایش فایل تنظیمات نود `لوکال`(local) پنل:
+##### ویرایش فایل تنظیمات نود `لوکال`(local) پنل:
 *  برای نود (local)`لوکال`، فایل زیر را ویرایش کنید
     - ```bash
        nano /etc/opt/marzneshin/docker-compose.yml
@@ -120,11 +115,18 @@ HYSTERIA_ENABLED: "True"
     - ```bash
        docker compose down && docker compose up -d
         ```
-### ریستارت نود لوکال پنل Marzneshin:
+##### ریستارت نود لوکال پنل Marzneshin:
 * برای نود لوکال از دستور زیر استفاده کنید:
     - ```bash 
        marzneshin restart
        ```
+برای غیرفعال کردن هسته سینگ‌باکس متغییر زیرو مقدار دهی کنید 
+
+`SING_BOX_ENABLED:` `"False" / "True"`
+
+```bash
+ SING_BOX_ENABLED: "False"
+ ```
 
 
 
@@ -141,7 +143,7 @@ HYSTERIA_ENABLED: "True"
 ## متغیرهای عمومی و کاربرد آن‌ها
 
 {{% steps %}}
-{{% details title="True و False" closed="true" %}}
+{{% details title="`True و False`" closed="true" %}}
 
 در متغیرهای تنظیمات، مقادیر `True و False` برای کنترل وضعیت ویژگی‌ها و سرویس‌ها استفاده می‌شوند:
 * True: برای فعال‌سازی ویژگی یا سرویس استفاده می‌شود.
@@ -151,7 +153,7 @@ HYSTERIA_ENABLED: "True"
 
 
 {{% /details %}}
-{{% details title="DEBUG" closed="true" %}}
+{{% details title="`DEBUG`" closed="true" %}}
   * این متغیر برای روشن یا خاموش کردن حالت اشکال‌زدایی `(Debug Mode)` به کار می‌رود.
     - ```bash
         DEBUG: "True"
@@ -160,7 +162,7 @@ HYSTERIA_ENABLED: "True"
   * False: غیرفعال‌سازی حالت اشکال‌زدایی. سیستم تنها اطلاعات حیاتی را نمایش می‌دهد.
 {{% /details %}}
 
-{{% details title="AUTH_GENERATION_ALGORITHM" closed="true" %}}
+{{% details title="`AUTH_GENERATION_ALGORITHM`" closed="true" %}}
   * این متغیر مشخص می‌کند که چه الگوریتمی برای تولید هش یا کلید احراز هویت استفاده شود.
       - ```bash
         AUTH_GENERATION_ALGORITHM: "xxh128"
@@ -179,7 +181,19 @@ HYSTERIA_ENABLED: "True"
 
 {{% /details %}}
 
-{{% details title="مدیریت سرویس XRAY در مرزنشین" closed="true" %}}
+{{% details title="`INSECURE`" closed="true" %}}
+
+##### برای اتصال نود به پنل مرزنشین از طریق `grpcio` باید متغیر زیر را اضافه کنید:
+`INSECURE:` `"True"` / `"False`
+
+```bash
+  INSECURE: "True"
+  ```
+> این متغیر اتصال نود به پنل را از طریق grpcio امکان‌پذیر می‌کند.
+
+{{% /details %}}
+
+{{% details title="`مدیریت سرویس XRAY در مرزنشین`" closed="true" %}}
   ##### متغیرها و توضیحات:
 
   > متغیری برای فعال یا غیرفعال کردن سرویس XRAY.
@@ -206,7 +220,7 @@ HYSTERIA_ENABLED: "True"
 
 
 
-{{% details title="مدیریت سرویس Hysteria در مرزنشین" closed="true" %}}  
+{{% details title="`مدیریت سرویس Hysteria در مرزنشین`" closed="true" %}}  
   ##### متغیرها و توضیحات:
 
   > متغیری برای فعال یا غیرفعال کردن سرویس Hysteria.
@@ -220,7 +234,7 @@ HYSTERIA_ENABLED: "True"
 
 {{% /details %}}
 
-{{% details title="مدیریت سرویس Sing-Box در مرزنشین" closed="true" %}} 
+{{% details title="`مدیریت سرویس Sing-Box در مرزنشین`" closed="true" %}} 
   ##### متغیرها و توضیحات:
 
   > متغیری برای فعال یا غیرفعال کردن سرویس Sing-Box.
