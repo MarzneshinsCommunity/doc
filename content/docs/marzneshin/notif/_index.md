@@ -3,6 +3,10 @@ title: Notifications
 weight: 5  
 ---
 
+{{< tabs items="Telegram,Webhook" >}}
+
+{{< tab >}}  
+
 To receive notifications through a Telegram bot, you can follow the steps below:
 
 {{% steps %}}
@@ -54,3 +58,14 @@ marzneshin restart
 From now on, you will receive notifications related to users.
 
 {{% /steps %}}
+
+{{< /tab >}}  
+
+{{< tab >}}  
+
+A webhook is a method for receiving Telegram bot notifications, where instead of being sent to the bot itself, they are directed to your API. This allows you to use these notifications in your websites or applications. However, utilizing webhooks requires technical programming knowledge and is generally not suitable for regular users.
+
+{{< /tab >}}  
+
+{{< /tabs >}}
+
