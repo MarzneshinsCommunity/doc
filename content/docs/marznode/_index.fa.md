@@ -8,5 +8,6 @@ weight: 2
   {{< card link="install/" title="نصب">}}
   {{< card link="core/" title="کانفیگ هسته">}}
   {{< card link="varibles/" title="متغیرها">}}
+  {{< card link="commands/" title="دستورات">}}
   {{< card link="script/" title="اسکریپت ها">}}
 {{< /cards >}}
