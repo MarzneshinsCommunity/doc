@@ -11,4 +11,5 @@ weight: 1
   {{< card link="commands/" title="دستورات">}}
   {{< card link="notif/" title="اعلانات">}}
   {{< card link="phpmyadmin/" title="Phpmyadmin">}}
+  {{< card link="subtemplates/" title="ساب تمپلیت">}}
 {{< /cards >}}
