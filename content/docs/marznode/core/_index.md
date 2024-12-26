@@ -2,44 +2,51 @@
 title: Cores
 weight: 4
 ---
-
-
-{{% steps %}}
-
-### Xray Core :
-* When MarzNode is installed, the Xray core is activated by default. No additional configuration is required for this core.
-
->#### To disable the Xray core, set the following variable:
->* `XRAY_ENABLED:` `"False"` / `"True"`
->    - ```bash
->        XRAY_ENABLED: "False"
->       ```
->
->
-  
-__The End ___
-
-### Hysteria2 Core :
-
-{{< callout type="info" >}}
-
-Follow the [certificate generation guide for MarzNode](nskskks) to generate a certificate for your node and add it to the Hysteria inbound configuration to activate the Hysteria core.
-
+{{< callout emoji="🌐" >}}
+This page explains how to configure and set up the following cores.
 {{< /callout >}}
 
- {{% steps %}}
+
+As explained, MarzNode uses the following three cores as its central cores.
+Click on each tab to view the corresponding details.
+
+
+{{< tabs items="Xray,hysteria2,SingBox" >}}
+
+{{< tab >}}
+{{< callout type="info" >}}
+When MarzNode is installed, the Xray core is activated by default. No additional configuration is required for this core.
+{{< /callout >}}
+
+
+To disable the Xray core, set the following variable:
+
+
+  `XRAY_ENABLED:` `"False"` / `"True"`
+ 
+```bash
+  XRAY_ENABLED: "False"
+ ```
+ {{< /tab >}}
+
+ {{< tab >}}
+ {{< callout type="info" >}}
+  Follow the [certificate generation guide for MarzNode](nskskks) to generate a certificate for your node and add it to the Hysteria inbound configuration to activate the Hysteria core.
+ {{< /callout >}}
+
+{{% steps %}}
 
 ### Download the Hysteria2 Config File:
 *  Use the following command to download the config file and save it to the specified path:
     - ```bash
-         curl -L https://github.com/marzneshin/marznode/raw/master/hysteria.yaml > /var/lib/marznode/hysteria.yaml
+       curl -L https://github.com/marzneshin/marznode/raw/master/hysteria.yaml > /var/lib/marznode/hysteria.yaml
        ```
 ### Edit the MarzNode Configuration File:
 * Navigate to the MarzNode directory and open the Docker Compose configuration file:
     - ```bash
        cd marznode && nano compose.yml
       ```
-### Edit the Local Node Configuration File:
+##### Edit the Local Node Configuration File:
 * For the local node, edit the following file:
     - ```bash
       nano /etc/opt/marzneshin/docker-compose.yml
@@ -58,7 +65,7 @@ HYSTERIA_ENABLED: "True"
     - ```bash
       docker compose down && docker compose up -d
       ```
-### Restart the Local Node:
+##### Restart the Local Node:
 * For the local node, use the following command:
     
      - ```bash
@@ -75,10 +82,8 @@ HYSTERIA_ENABLED: "True"
 >
    {{% /steps %}}
 
-___The End ___
-
-
-### Sing-Box core :
+  {{< /tab >}}
+  {{< tab >}}
  {{% steps %}}
 
  ### Download the Sing-Box Config File:
@@ -93,7 +98,7 @@ ___The End ___
     - ```bash
        cd marznode && nano compose.yml
         ```
-### Edit the Local Node Configuration File:
+##### Edit the Local Node Configuration File:
 *  For the local node, edit the following file:
     - ```bash
        nano /etc/opt/marzneshin/docker-compose.yml
@@ -110,7 +115,7 @@ ___The End ___
     - ```bash
        docker compose down && docker compose up -d
         ```
-### Restart the Local Node:
+##### Restart the Local Node:
 * For the local node, use the following command:
     - ```bash 
        marzneshin restart
@@ -121,28 +126,25 @@ ___The End ___
  >           SING_BOX_ENABLED: "False"
  >           ```
 
-
-
   {{% /steps %}}
+  {{< /tab >}}
 
-{{% /steps %}}
+  {{< /tabs >}}
 
-{{% details title="Additional Details"closed="true" %}}
-
-## General Variables and Their Usage
+## Public Variables and Their Usage
 
 {{% steps %}}
+{{% details title="`True و False`" closed="true" %}}
 
-### True and False  
 In configuration variables, the values `True` and `False` are used to control the status of features and services:  
 * **True**: Used to enable a feature or service.  
 * **False**: Used to disable a feature or service.  
 - To enable a feature, set the variable to `True`.  
 - To disable a feature, set the variable to `False`.  
 
-___  
+{{% /details %}}
+{{% details title="`DEBUG`" closed="true" %}}
 
-### DEBUG  
 * This variable is used to toggle the debug mode.  
   - ```bash
       DEBUG: "True"
@@ -150,9 +152,9 @@ ___
 * **True**: Enables debug mode, providing more detailed logs to troubleshoot issues.  
 * **False**: Disables debug mode, showing only essential information.  
 
-___  
+{{% /details %}}
 
-### AUTH_GENERATION_ALGORITHM  
+{{% details title="`AUTH_GENERATION_ALGORITHM`" closed="true" %}}
 
 * This variable specifies the algorithm used for generating hashes or authentication keys.  
 
@@ -167,11 +169,25 @@ ___
 > **sha256**: Recommended for applications prioritizing security over speed.  
 > **md5**: Only use for non-sensitive applications.  
 
-___  
+{{% /details %}}
 
-### Managing the `XRAY` Service in Marzneshin  
 
-#### Variables and Descriptions:  
+{{% details title="`INSECURE`" closed="true" %}}
+
+##### To connect the node to the Marzneshin panel via `grpcio` you need to add the following variable:
+
+`INSECURE:` `"True"` / `"False`
+
+```bash
+  INSECURE: "True"
+  ```
+  > This variable enables the connection between the `node` and the `panel` via `grpcio`.
+
+  {{% /details %}}
+
+{{% details title="`Managing the `XRAY` Service in Marzneshin`" closed="true" %}}  
+
+##### Variables and Descriptions:  
 
 > A variable to enable or disable the XRAY service.  
 > * `XRAY_ENABLED:` `"True" / "False"`  
@@ -193,11 +209,12 @@ ___
 >
 > **Usage**: If restart attempts are needed, set a specific interval in seconds.  
 
-___  
+{{% /details %}}
 
-### Managing the Hysteria Service in Marzneshin  
 
-#### Variables and Descriptions:  
+{{% details title="`Managing the Hysteria Service in Marzneshin`" closed="true" %}}
+
+##### Variables and Descriptions:  
 
 > A variable to enable or disable the Hysteria service.  
 > * `HYSTERIA_ENABLED:` `"True" / "False"`  
@@ -208,11 +225,12 @@ ___
 > Path to Hysteria’s configuration file containing the key service settings.  
 > * `HYSTERIA_CONFIG_PATH:` `"/var/lib/marznode/hysteria.yaml"`  
 
-___  
+{{% /details %}}
 
-### Managing the Sing-Box Service in Marzneshin  
 
-#### Variables and Descriptions:  
+{{% details title="`Managing the Sing-Box Service in Marzneshin`" closed="true" %}}
+
+##### Variables and Descriptions:  
 
 > A variable to enable or disable the Sing-Box service.  
 > * `SING_BOX_ENABLED:` `"True" / "False"`  
@@ -231,7 +249,7 @@ ___
 >
 > **Usage**: If restart attempts are needed, set a specific interval in seconds.  
 
-{{% /steps %}}  
+
 {{% /details %}}
 
-
+{{% /steps %}}
