@@ -45,7 +45,7 @@ TELEGRAM_LOGGER_CHANNEL_ID = -1234567890123
 - **آدرس پروکسی تلگرام** (اختیاری): اگر از پروکسی استفاده می‌کنید، آدرس پروکسی خود را وارد کنید.
 
 ```bash
-TELEGRAM_LOGGER_CHANNEL_ID = -1234567890123
+TELEGRAM_PROXY_URL = "http://localhost:8080"
 ```
 
 ### ریستارت کردن سرویس مرزنشین  
