@@ -30,10 +30,6 @@ marzneshin status
 marzneshin logs
 ```
 
-#### Install Marzneshin
-```bash
-marzneshin install
-```
 
 #### Update latest version
 ```bash
