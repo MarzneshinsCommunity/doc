@@ -55,7 +55,7 @@ To disable the Xray core, set the following variable:
 ### Add the Following Variables to the Docker Configuration File:
 
   ```bash
-HYSTERIA_CONFIG_PATH: "/var/lib/>marznode/hysteria.yaml"  
+HYSTERIA_CONFIG_PATH: "/var/lib/marznode/hysteria.yaml"  
 HYSTERIA_ENABLED: "True"  
  ```
 
