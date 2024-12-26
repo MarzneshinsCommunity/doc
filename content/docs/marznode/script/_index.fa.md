@@ -1,6 +1,6 @@
 ---
 title: اسکریپت
-weight: 5
+weight: 99
 ---
 
 
