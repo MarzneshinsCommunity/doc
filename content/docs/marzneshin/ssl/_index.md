@@ -54,8 +54,8 @@ After obtaining the certificate, install it in the appropriate directory. Use th
 {{< tab >}}  
 ```bash
 ~/.acme.sh/acme.sh --install-cert -d yourdomain.com \
---cert-file /var/lib/marzneshin/yourdomain/fullchain.pem \
---key-file /var/lib/marzneshin/yourdomain/privkey.pem
+--cert-file /var/lib/marzneshin/certs/yourdomain/fullchain.pem \
+--key-file /var/lib/marzneshin/certs/yourdomain/privkey.pem
 ```
 
 {{< /tab >}}  
@@ -63,8 +63,8 @@ After obtaining the certificate, install it in the appropriate directory. Use th
 {{< tab >}}  
 ```bash
 ~/.acme.sh/acme.sh --install-cert -d yourdomain.com \
---cert-file /var/lib/marznode/yourdomain/fullchain.pem \
---key-file /var/lib/marznode/yourdomain/privkey.pem
+--cert-file /var/lib/marznode/certs/yourdomain/fullchain.pem \
+--key-file /var/lib/marznode/certs/yourdomain/privkey.pem
 ```
 
 {{< /tab >}}  
