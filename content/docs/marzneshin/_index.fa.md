@@ -10,4 +10,5 @@ weight: 1
   {{< card link="ssl/" title="سرتیفیکیت">}}
   {{< card link="commands/" title="دستورات">}}
   {{< card link="notif/" title="اعلانات">}}
+  {{< card link="phpmyadmin/" title="Phpmyadmin">}}
 {{< /cards >}}
