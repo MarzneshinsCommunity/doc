@@ -31,10 +31,6 @@ marzneshin status
 marzneshin logs
 ```
 
-#### نصب مرزنشین
-```bash
-marzneshin install
-```
 
 #### به روزرسانی به آخرین ورژن
 ```bash
