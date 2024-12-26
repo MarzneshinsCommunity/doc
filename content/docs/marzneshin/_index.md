@@ -9,4 +9,5 @@ weight: 1
   {{< card link="dbpass/" title="Database Password">}}
   {{< card link="ssl/" title="SSL">}}
   {{< card link="commands/" title="Commands">}}
+  {{< card link="notif/" title="Notifications">}}
 {{< /cards >}}
