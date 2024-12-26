@@ -20,7 +20,7 @@ curl https://get.acme.sh | sh
 بعد از نصب، برای دریافت اعلان‌های گواهی‌ها، ایمیل خود را ثبت کنید:
 
 ```bash
-acme.sh --register-account -m your_email@example.com
+~/.acme.sh/acme.sh --register-account -m your_email@example.com
 ```
 
 ### 3. دریافت گواهی SSL

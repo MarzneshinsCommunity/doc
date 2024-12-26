@@ -20,7 +20,7 @@ curl https://get.acme.sh | sh
 Next, register your email for notifications:
 
 ```bash
-acme.sh --register-account -m your_email@example.com
+~/.acme.sh/acme.sh --register-account -m your_email@example.com
 ```
 
 ### 3. Obtain SSL Certificate
