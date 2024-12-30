@@ -32,6 +32,10 @@ weight: 3
 
 {{< /callout >}}
 
+{{< tabs items="Marznode, local node" >}}
+
+ {{< tab >}}
+
  {{% steps %}}
 
 ### دانلود فایل کانفیگ Hysteria2:
@@ -43,12 +47,7 @@ weight: 3
 * ابتدا به دایرکتوری Marznode بروید و فایل تنظیمات Docker Compose را باز کنید
     - ```bash
        cd marznode && nano compose.yml
-      ```
-##### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
-* برای نود `لوکال`، فایل زیر را ویرایش کنید
-    - ```bash
-      nano /etc/opt/marzneshin/docker-compose.yml
-      ```
+        ```
 
 ### افزودن متغیرهای زیر به فایل داکر:
 
@@ -63,25 +62,66 @@ HYSTERIA_ENABLED: "True"
     - ```bash
       docker compose down && docker compose up -d
       ```
-##### ریستارت نود لوکال پنل Marzneshin:
-* برای نود لوکال از دستور زیر استفاده کنید
-    
-     - ```bash
-       marzneshin restart
+
+
+  {{% /steps %}}
+
+  {{< /tab >}}
+
+  {{< tab >}}
+
+  {{% steps %}}
+
+  ### دانلود فایل کانفیگ Hysteria2:
+  *  با دستور زیر فایل کانفیگ را دریافت و در مسیر مشخص ذخیره کنید
+      - ```bash
+         curl -L https://github.com/marzneshin/marznode/raw/master/hysteria.yaml > /var/lib/marznode/hysteria.yaml
+          ```
+  
+### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
+* برای نود `لوکال`، فایل زیر را ویرایش کنید
+
+    - ```bash
+       nano /etc/opt/marzneshin/docker-compose.yml
         ```
+### افزودن متغیرهای زیر به فایل داکر قسمت `marznode:` زیر `environment:` اضافه کنید 
 
+```
+HYSTERIA_EXECUTABLE_PATH: "/usr/local/bin/hysteria"
+HYSTERIA_CONFIG_PATH: "/var/lib/marznode/hysteria.yaml"
+HYSTERIA_ENABLED: "True"
+```
 
-در صورت نیاز، برای غیرفعال کردن هسته هیستریا متغیر زیر را مقداردهی کنید 
+### ریستارت پنل Marzneshin:
+
+```bash
+marzneshin restart
+```
+
+{{% /steps %}}
+
+  {{< /tab >}}
+
+ {{< /tabs >}}
+
+___
+
+##### در صورت نیاز، برای غیرفعال کردن هسته هیستریا متغیر زیر را مقداردهی کنید 
+
+*  `HYSTERIA_ENABLED:` `True` / `False`
 
 ```bash
   HYSTERIA_ENABLED: "False"
   ```
-   {{% /steps %}}
+  
 
   {{< /tab >}}
   {{< tab >}}
     {{% steps %}}
+{{< tabs items="Marznode, local node" >}}
+    {{< tab >}}
   ### دانلود فایل کانفیگ sing-box
+
   * با دستور زیر فایل کانفیگ را دریافت و در مسیر مشخص ذخیره کنید
     - ```bash
         curl -L https://raw.githubusercontent.com/MarzneshinsCommunity/files/refs/heads/main/sing-box.json > /var/lib/marznode/sing-box.json
@@ -89,15 +129,12 @@ HYSTERIA_ENABLED: "True"
 
 
   ### ویرایش فایل تنظیمات Marznode:
+  
   * ابتدا به دایرکتوری Marznode بروید و فایل تنظیمات Docker Compose را باز کنید
       - ```bash
         cd marznode && nano compose.yml
           ```
-##### ویرایش فایل تنظیمات نود `لوکال`(local) پنل:
-*  برای نود (local)`لوکال`، فایل زیر را ویرایش کنید
-    - ```bash
-       nano /etc/opt/marzneshin/docker-compose.yml
-        ```
+
 
 ### افزودن متغیرهای زیر به فایل داکر:
 * ```bash
@@ -110,21 +147,49 @@ HYSTERIA_ENABLED: "True"
     - ```bash
        docker compose down && docker compose up -d
         ```
-##### ریستارت نود لوکال پنل Marzneshin:
-* برای نود لوکال از دستور زیر استفاده کنید:
-    - ```bash 
-       marzneshin restart
+{{< /tab >}}
+{{< tab >}}
+
+### دانلود فایل کانفیگ sing-box
+* با دستور زیر فایل کانفیگ را دریافت و در مسیر مشخص ذخیره کنید
+
+    - ```bash
+       curl -L https://raw.githubusercontent.com/MarzneshinsCommunity/files/refs/heads/main/sing-box.json > /var/lib/marznode/sing-box.json
        ```
-در صورت نیاز، برای غیرفعال کردن هسته سینگ‌باکس متغیر زیر را مقداردهی کنید 
 
+### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
+* برای نود `لوکال`، فایل زیر را ویرایش کنید
+    - ```bash
+       nano /etc/opt/marzneshin/docker-compose.yml
+       ```
+### افزودن متغیرهای زیر به فایل داکر قسمت `marznode:` زیر `environment:` اضافه کنید 
 
+```bash
+SING_BOX_ENABLED: "True"
+SING_BOX_EXECUTABLE_PATH: "/usr/local/bin/sing-box"
+SING_BOX_CONFIG_PATH: "/var/lib/marznode/sing-box.json"
+```
+
+### ریستارت پنل Marzneshin:
+```bash
+marzneshin restart
+```
+
+{{< /tab >}}
+{{< /tabs >}}
+
+{{% /steps %}}
+___
+
+#### در صورت نیاز، برای غیرفعال کردن هسته سینگ‌باکس متغیر زیر را مقداردهی کنید 
+* `SING_BOX_ENABLED:` `True` / `False`
 ```bash
  SING_BOX_ENABLED: "False"
  ```
 
 
 
-  {{% /steps %}}
+  
   {{< /tab >}}
 
 {{< /tabs >}}
