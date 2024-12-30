@@ -76,7 +76,7 @@ params:
     flexsearch:
       index: content
   
-defaultContentLanguage: en
+defaultContentLanguage: fa
 languages:
   en:
     languageName: English
