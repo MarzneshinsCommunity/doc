@@ -78,7 +78,7 @@ HYSTERIA_ENABLED: "True"
          curl -L https://github.com/marzneshin/marznode/raw/master/hysteria.yaml > /var/lib/marznode/hysteria.yaml
           ```
   
-##### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
+### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
 * برای نود `لوکال`، فایل زیر را ویرایش کنید
 
     - ```bash
@@ -92,7 +92,7 @@ HYSTERIA_CONFIG_PATH: "/var/lib/marznode/hysteria.yaml"
 HYSTERIA_ENABLED: "True"
 ```
 
-##### ریستارت پنل Marzneshin:
+### ریستارت پنل Marzneshin:
 
 ```bash
 marzneshin restart
@@ -157,7 +157,7 @@ ___
        curl -L https://raw.githubusercontent.com/MarzneshinsCommunity/files/refs/heads/main/sing-box.json > /var/lib/marznode/sing-box.json
        ```
 
-##### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
+### ویرایش فایل تنظیمات نود لوکال (Local) پنل:
 * برای نود `لوکال`، فایل زیر را ویرایش کنید
     - ```bash
        nano /etc/opt/marzneshin/docker-compose.yml
@@ -170,7 +170,7 @@ SING_BOX_EXECUTABLE_PATH: "/usr/local/bin/sing-box"
 SING_BOX_CONFIG_PATH: "/var/lib/marznode/sing-box.json"
 ```
 
-##### ریستارت پنل Marzneshin:
+### ریستارت پنل Marzneshin:
 ```bash
 marzneshin restart
 ```
@@ -181,7 +181,7 @@ marzneshin restart
 {{% /steps %}}
 ___
 
-##### در صورت نیاز، برای غیرفعال کردن هسته سینگ‌باکس متغیر زیر را مقداردهی کنید 
+#### در صورت نیاز، برای غیرفعال کردن هسته سینگ‌باکس متغیر زیر را مقداردهی کنید 
 * `SING_BOX_ENABLED:` `True` / `False`
 ```bash
  SING_BOX_ENABLED: "False"
