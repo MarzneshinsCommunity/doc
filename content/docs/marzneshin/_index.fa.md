@@ -12,4 +12,5 @@ weight: 1
   {{< card link="notif/" title="اعلانات">}}
   {{< card link="phpmyadmin/" title="Phpmyadmin">}}
   {{< card link="subtemplates/" title="ساب تمپلیت">}}
+  {{< card link="backup/" title="بکاپ">}}
 {{< /cards >}}

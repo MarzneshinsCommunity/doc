@@ -12,4 +12,5 @@ weight: 1
   {{< card link="notif/" title="Notifications">}}
   {{< card link="phpmyadmin/" title="Phpmyadmin">}}
   {{< card link="subtemplates/" title="Sub Templates">}}
+  {{< card link="backup/" title="Backup">}}
 {{< /cards >}}
