@@ -31,7 +31,7 @@ To disable the Xray core, set the following variable:
 
  {{< tab >}}
  {{< callout type="info" >}}
-  Follow the [certificate generation guide for MarzNode](nskskks) to generate a certificate for your node and add it to the Hysteria inbound configuration to activate the Hysteria core.
+  Follow the certificate generation guide for MarzNode to generate a certificate for your node and add it to the Hysteria inbound configuration to activate the Hysteria core.
  {{< /callout >}}
 
 {{% steps %}}
