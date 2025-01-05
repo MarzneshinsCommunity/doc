@@ -78,13 +78,15 @@ HYSTERIA_ENABLED: "True"
     - ```bash
       nano /etc/opt/marzneshin/docker-compose.yml
       ```
-### Add the following variables under the `environment:` section of the `marznode:` part in the Docker file
+### Add the following variables under the `environment` section of the `marznode` part in the Docker file
+
 
 ```bash
 HYSTERIA_EXECUTABLE_PATH: "/usr/local/bin/hysteria"
 HYSTERIA_CONFIG_PATH: "/var/lib/marznode/hysteria.yaml"
 HYSTERIA_ENABLED: "True"
 ```
+
 ### Restart the Marzneshin panel:
 ```bash
 marzneshin restart

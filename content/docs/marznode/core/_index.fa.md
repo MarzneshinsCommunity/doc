@@ -84,9 +84,9 @@ HYSTERIA_ENABLED: "True"
     - ```bash
        nano /etc/opt/marzneshin/docker-compose.yml
         ```
-### افزودن متغیرهای زیر به فایل داکر قسمت `marznode:` زیر `environment:` اضافه کنید 
+### افزودن متغیرهای زیر به فایل داکر قسمت `marznode` زیر `environment` اضافه کنید 
 
-```
+```bash
 HYSTERIA_EXECUTABLE_PATH: "/usr/local/bin/hysteria"
 HYSTERIA_CONFIG_PATH: "/var/lib/marznode/hysteria.yaml"
 HYSTERIA_ENABLED: "True"
