@@ -52,7 +52,7 @@ weight: 3
 ### افزودن متغیرهای زیر به فایل داکر:
 
   ```bash
-HYSTERIA_CONFIG_PATH: "/var/lib/>marznode/hysteria.yaml"  
+HYSTERIA_CONFIG_PATH: "/var/lib/marznode/hysteria.yaml"  
 HYSTERIA_ENABLED: "True"  
  ```
 
