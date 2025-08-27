@@ -1,6 +1,6 @@
 ---
 title: دستورات
-weight: 5
+weight: 6
 ---
 
 ابتدا وارد دایرکتوری `marznode` شوید:

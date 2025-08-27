@@ -1,6 +1,6 @@
 ---
 title: Cores
-weight: 3
+weight: 4
 ---
 {{< callout emoji="🌐" >}}
 This page explains how to configure and set up the following cores.

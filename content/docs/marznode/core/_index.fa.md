@@ -1,6 +1,6 @@
 ---
 title: هسته
-weight: 3
+weight: 4
 ---
 
 {{< callout emoji="🌐" >}}

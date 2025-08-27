@@ -1,6 +1,6 @@
 ---
 title: Commands  
-weight: 5  
+weight: 6
 ---
 
 First, navigate to the `marznode` directory:
