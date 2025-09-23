@@ -1,5 +1,8 @@
 ### Marzneshin Community Docs: Guide to Clone, Install, and Contribute
 
+> [!IMPORTANT]
+> This project is developed by the community.
+
 **Hello!**  
 Welcome to the **Marzneshin Community Docs** repository.  
 This documentation is developed by the active Marzneshin community to ensure quick, easy access and archiving of information.  
